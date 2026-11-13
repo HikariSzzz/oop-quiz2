@@ -8,7 +8,6 @@ public class RegularLaundry extends LaundryOrder {
 
     @Override
     public double calculatePrice() {
-        // Aturan: harga = berat x Rp 6.000 per kg
         return getWeightKg() * 6000.0;
     }
 }
