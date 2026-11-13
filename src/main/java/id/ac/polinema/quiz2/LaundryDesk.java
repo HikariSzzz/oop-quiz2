@@ -50,4 +50,14 @@ public class LaundryDesk {
     /**
      * @return daftar pesanan laundry menurut urutan penambahan
      */
+    public List<LaundryOrder> getOrders() {
+        return orderList;
+    }
+
+    public void checkout(String orderId) {
+        LaundryOrder order = findById(orderId);
+        if (order != null) {
+            printer.print(order.getOrderId(), order.calculatePrice());
+        }
+    }
 }
