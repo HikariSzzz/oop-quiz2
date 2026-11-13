@@ -5,13 +5,9 @@ package id.ac.polinema.quiz2;
  */
 public class Customer {
 
-    // 1. Deklarasikan field private sesuai diagram
     private String customerId;
     private String name;
 
-    /**
-     * Menyimpan kedua parameter ke field.
-     */
     public Customer(String customerId, String name) {
         this.customerId = customerId;
         this.name = name;
@@ -25,10 +21,6 @@ public class Customer {
         return name;
     }
 
-    /**
-     * Mengubah nama. Nama yang null atau kosong (hanya spasi) tidak valid:
-     * abaikan dan biarkan nama lama tetap.
-     */
     public void setName(String name) {
         if (name != null && !name.trim().isEmpty()) {
             this.name = name;
